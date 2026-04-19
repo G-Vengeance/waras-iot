@@ -39,7 +39,8 @@ export default function ControlPanel({
             onClick={() => onModeChange('otomatis' as ControlMode)} // SINKRON DENGAN ESP32
             className={`
             px-4 py-3 rounded-lg border-2 font-medium transition-all duration-200 cursor-pointer
-            ${(mode === 'auto' || mode === 'otomatis')
+            // @ts-ignore
+            ${mode === 'otomatis' || mode === 'auto'
               ? 'bg-blue-50 border-blue-500 text-blue-700'
               : 'bg-white border-gray-200 text-gray-700 hover:border-gray-300'
             }
